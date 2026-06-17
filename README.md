@@ -25,13 +25,13 @@ The script supports direct command-line arguments and configuration loading from
 
 ## Installation
 
-```bash
+``` bash
 pip install pandas openpyxl
 ```
 
 ## JSON configuration example
 
-```bash
+``` bash
 {
   "path": "C:/data",
   "file_list": "ALL",
@@ -42,10 +42,27 @@ pip install pandas openpyxl
 
 ## Usage
 
-```bash
+Convert all files inside the `/data` directory:
+
+``` bash
 python ExcelCSVConverter.py -P "/data" -L ALL
+```
+
+Convert only the specified files inside the `/data` directory:
+
+``` bash
 python ExcelCSVConverter.py -P "/data" -L "file1.csv,file2.xlsx"
+```
+
+Run the conversion using the parameters defined in `config.json`:
+
+``` bash
 python ExcelCSVConverter.py --config config.json
+```
+
+Convert all files inside the `/data` directory and force the conversion/overwrite behavior:
+
+``` bash
 python ExcelCSVConverter.py -P "/data" -L ALL -F
 ```
 
